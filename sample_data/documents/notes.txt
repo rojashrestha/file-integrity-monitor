@@ -1,0 +1,2 @@
+Security note: a SHA-256 digest acts like a fingerprint for a file's contents.
+A changed file normally has a different hash.

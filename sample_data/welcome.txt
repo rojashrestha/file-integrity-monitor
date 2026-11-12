@@ -1,0 +1,3 @@
+Hello! This is a safe sample folder for the File Integrity Monitor.
+Change this sentence, then run the `check` command to see a modified-file alert.
+Hello! We are modifing this file

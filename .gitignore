@@ -1,0 +1,24 @@
+# Python caches and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Local snapshots and machine-specific data (do NOT commit)
+.fim/
+baseline.json
+*.fim.json
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.github/workflows/tests.yml
+.github/workflows/tests.yml
