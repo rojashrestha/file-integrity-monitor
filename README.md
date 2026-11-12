@@ -222,41 +222,6 @@ Example (after editing `welcome.txt`):
 
 **Tip:** A CI script can interpret exit code `1` as an integrity alert.
 
-## ☁️ Upload your project to GitHub
-
-### Method A: GitHub website (easiest)
-
-1. Create a GitHub account if needed: <https://github.com>.
-2. Click **New repository** and name it `file-integrity-monitor`.
-3. Choose **Public** if you want to show it on your resume.
-4. Leave **Add README**, **Add .gitignore**, and **Choose license** unchecked, since the project already has them.
-5. Click **Create repository**.
-6. Use **uploading an existing file** and drag all project files and folders (including hidden `.github` and `.gitignore` files where supported). Git/GitHub Desktop is more reliable for uploading hidden folders.
-7. Commit the files. Verify `README.md`, `tests/`, `fim_monitor/`, and `.github/workflows/tests.yml` are present.
-8. Verify the **Actions** tab shows passing tests.
-
-### Method B: Git commands (recommended)
-
-Create an empty repository on GitHub as described in steps 1–5 above, then run these commands **in the project root**:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Python file integrity monitor"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/file-integrity-monitor.git
-git push -u origin main
-```
-
-Replace `YOUR_USERNAME` with your GitHub username. You may need to configure your Git name/email or authenticate with GitHub. GitHub no longer accepts account passwords for Git over HTTPS; follow its browser, credential manager, or personal access token prompts.
-
-**Before publishing:** `git status` should **not** include `.fim/baseline.json` or other private snapshots. Avoid publishing sensitive folders or test files with personal information.
-
-## 📝 Resume description
-
-> **File Integrity Monitor | Python, SHA-256, JSON, GitHub Actions**  
-> Built a command-line security tool to detect file additions, deletions, and unauthorized content modifications using SHA-256 fingerprints. Implemented trusted JSON baselines, continuous polling, machine-readable alerts, and automated unit tests with GitHub Actions.
-
 ## 🔐 Security notes and limitations
 
 - **Detection, not prevention:** It reports differences; it does not stop attacks, identify malware, or attribute changes to an attacker.
